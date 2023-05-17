@@ -197,5 +197,59 @@ Now that you have created the individual components, it's time to integrate them
 5. Save the `app.jsx` file.
 
 Congratulations! You have now created the individual components and assembled them in the main `app.jsx` file. You can continue working on each component to add functionality and styling as needed.
+# Step 9: Adding Custom Todo Components with Props Drilling
 
-In the next steps, we will explore adding interactivity to the components and styling them using Tailwind CSS utility classes.
+To enhance the functionality of your Todo app, you can create custom components that accept props to handle specific tasks or display data. Let's explore how to add custom Todo components and utilize props drilling:
+
+1. Identify the functionality or data that you want to handle with a custom component. For example, you might want to create a `TodoItem` component to render individual todo items.
+
+2. Create a new file in the `components` folder for your custom component. For example, create a file named `TodoItem.jsx`.
+
+3. Open the `TodoItem.jsx` file and define a functional component that accepts props. For instance:
+   ```jsx
+   import React from 'react';
+
+   const TodoItem = ({ todo }) => {
+     return (
+       <div>
+         <input type="checkbox" checked={todo.completed} />
+         <span>{todo.description}</span>
+         <button>Delete</button>
+       </div>
+     );
+   };
+
+   export default TodoItem;
+   ```
+
+4. Customize the JSX structure and styling within the component based on your requirements. In this example, we're rendering a checkbox, the todo description, and a delete button.
+
+5. Save the `TodoItem.jsx` file.
+
+6. In your `TodoList` component, import the `TodoItem` component.
+   ```jsx
+   import TodoItem from './TodoItem';
+   ```
+
+7. Within the `TodoList` component's JSX, map over the todos and render a `TodoItem` component for each todo:
+   ```jsx
+   const TodoList = ({ todos }) => {
+     return (
+       <div>
+         {todos.map((todo) => (
+           <TodoItem key={todo.id} todo={todo} />
+         ))}
+       </div>
+     );
+   };
+   ```
+
+8. Pass the necessary props from the parent component (in this case, `TodoList`) to the `TodoItem` component. In this example, we're passing the `todo` object as a prop.
+
+9. Customize the component rendering based on the data passed through props. For example, you can access the `todo` prop within the `TodoItem` component to display the appropriate data.
+
+By using props drilling, you can pass data and handle functionality between parent and child components, allowing for reusable and modular code. Repeat these steps to create and integrate additional custom components for different features of your Todo app.
+
+Remember to consider the necessary styling using Tailwind CSS utility classes within each component's JSX to achieve the desired look and feel.
+
+In the next steps, we will explore how to add interactivity to your Todo app, such as handling user input and updating the Todo list.
