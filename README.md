@@ -68,6 +68,42 @@ Inside your project, you will find a folder structure similar to the following:
 
 Feel free to explore and modify these folders to suit your project needs.
 
-Now you are ready to start building your React application using Vite and Tailwind CSS.
+# Step 6: Identifying Components for a Todo App
 
-I hope this blog markdown helps you understand the initial setup process. Happy coding!
+As you start building your Todo app using Tailwind CSS, it's important to have a brief idea about the different components you would require. Let's explore the components commonly found in a Todo app:
+
+## 1. Navbar/Sidebar
+
+A navbar or sidebar provides navigation and easy access to different sections of the app. It typically includes links or buttons to switch between views, such as the Todo list, settings, or user profile.
+
+## 2. Todo List
+
+The Todo list component is the central part of the app that displays the list of todos. Each todo item usually includes a checkbox to mark it as completed, the task description, and an optional delete button.
+
+## 3. Todo Item
+
+A single todo item represents a task in the Todo list. It consists of the task description, a checkbox to mark it as completed, and a delete button to remove it from the list.
+
+## 4. Todo Form
+
+The Todo form component allows users to add new tasks to the Todo list. It typically includes an input field where users can enter the task description and a submit button to add the task.
+
+## 5. Filters
+
+Filters help users to view specific subsets of their Todo list based on criteria such as completed tasks, active tasks, or tasks with a specific label. These filters can be implemented using buttons or dropdown menus.
+
+## 6. Label Component
+
+Labels are optional features that allow users to categorize tasks. A label component can be used to display and assign labels to individual tasks in the Todo list.
+
+## 7. Empty State
+
+The empty state component is displayed when the Todo list is empty. It provides a message or prompt to guide users on how to get started by adding their first task.
+
+These are the core components commonly used in a Todo app. Depending on your app's requirements, you may also consider additional features like task editing, due dates, prioritization, or user authentication.
+
+By breaking down the app into these components, you can approach development in a modular and organized manner, focusing on one component at a time.
+
+Remember, Tailwind CSS provides utility classes that can be used to style these components efficiently and achieve a consistent design throughout your app.
+
+In the next steps, we will dive deeper into each component and implement them in your Todo app.
