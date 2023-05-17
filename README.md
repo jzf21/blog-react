@@ -107,3 +107,95 @@ By breaking down the app into these components, you can approach development in 
 Remember, Tailwind CSS provides utility classes that can be used to style these components efficiently and achieve a consistent design throughout your app.
 
 In the next steps, we will dive deeper into each component and implement them in your Todo app.
+
+# Step 7: Creating Individual Components
+
+Now that you have identified the components needed for your Todo app, it's time to create the individual components. Follow these steps to add files to your components folder and create the components:
+
+1. Open your project in Visual Studio Code.
+
+2. Inside the "src" directory, create a new folder named "components" if it doesn't already exist.
+
+3. Create a new file for each component within the "components" folder. For example, create the following files:
+
+   - `Navbar.jsx` (for the Navbar/Sidebar component)
+   - `TodoList.jsx` (for the Todo List component)
+   - `TodoItem.jsx` (for the Todo Item component)
+   - `TodoForm.jsx` (for the Todo Form component)
+   - `Filters.jsx` (for the Filters component)
+   - `Label.jsx` (for the Label component)
+   - `EmptyState.jsx` (for the Empty State component)
+
+4. Open each component file and start implementing the respective component logic and JSX structure. You can use React functional components for simplicity.
+
+   For example, in `Navbar.jsx`:
+   ```jsx
+   import React from 'react';
+
+   const Navbar = () => {
+     return (
+       <nav>
+         {/* Navbar content */}
+       </nav>
+     );
+   };
+
+   export default Navbar;
+   ```
+
+   Repeat this process for each component, customizing the content and structure as per your requirements.
+
+5. Add the necessary Tailwind CSS classes to style each component. You can apply the classes directly within the JSX or create separate CSS files for each component.
+
+   For example, in `TodoList.jsx`:
+   ```jsx
+   import React from 'react';
+
+   const TodoList = () => {
+     return (
+       <div className="bg-white p-4 rounded-lg">
+         {/* Todo List content */}
+       </div>
+     );
+   };
+
+   export default TodoList;
+   ```
+
+6. Repeat steps 4 and 5 for all the other components, ensuring that each component file is properly implemented and styled.
+
+# Step 8: Putting Together All the Components in app.jsx
+
+Now that you have created the individual components, it's time to integrate them into the main `app.jsx` file. Follow these steps:
+
+1. Open the `app.jsx` file located in the root of the `src` directory.
+
+2. Import the components you have created:
+   ```jsx
+   import Navbar from './components/Navbar';
+   import TodoList from './components/TodoList';
+   import TodoForm from './components/TodoForm';
+   // Import other components as needed
+   ```
+
+3. Within the main `App` component, use the imported components to compose your Todo app's structure:
+   ```jsx
+   function App() {
+     return (
+       <div className="container mx-auto">
+         <Navbar />
+         <TodoList />
+         <TodoForm />
+         {/* Add other components here */}
+       </div>
+     );
+   }
+   ```
+
+4. Customize and arrange the components based on your desired layout and structure.
+
+5. Save the `app.jsx` file.
+
+Congratulations! You have now created the individual components and assembled them in the main `app.jsx` file. You can continue working on each component to add functionality and styling as needed.
+
+In the next steps, we will explore adding interactivity to the components and styling them using Tailwind CSS utility classes.
